@@ -68,7 +68,7 @@ export default {
       ...this.options
     }
 
-    this.require(['vs/editor/editor.main'], () => {
+    require(['vs/editor/editor.main'], () => {
       this.editorLoaded = true
       this.editor = window.monaco.editor.create(this.$el, options)
       this.$emit('editorMount', this.editor)
